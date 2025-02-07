@@ -12,7 +12,7 @@ username = input("Ingresa tu nombre: ")
 win_game = 0
 lose_game = 0
 keep = True #declarar variable que condicion la continuidad del ciclo
-while keep == True:
+while keep:
     rounds = 1
     win_round = 0
     lose_round = 0
@@ -92,7 +92,7 @@ while keep == True:
 
     #Preguntar si seguir jugando
     valid = False
-    while valid == False:
+    while not valid:
         choice = str.lower(input("\n¿Seguir jugando? (Y/N): "))
         if choice == 'y':
             keep = True
