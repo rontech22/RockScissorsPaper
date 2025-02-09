@@ -5,12 +5,17 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-@app.get("/familia")
-def get_familia():
-    rows = ["Amin", "Marce", "Miranda"]
-    return rows
+@app.get("/classic_options_es")
+def get_classic_opts_es():
+    options = ("piedra", "papel", "tijera")
+    return options
 
-@app.get("/superheroesDC")
-def get_superheroes():
-    rows = ["Superman", "Batman", "Flash", "Linterna Verde", "Mujer maravilla", "Aquaman", "Shazam", "Cyborg"]
-    return rows
+@app.get("/classic_options_en")
+def get_classic_opts_en():
+    options = ("rock", "scissors", "paper")
+    return options
+
+@app.get("/rpsls_options_en")
+def get_rpsls_opts_en():
+    options = ("rock", "scissors", "paper","lizard","spock")
+    return options
